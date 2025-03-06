@@ -1,0 +1,925 @@
+/*base*/
+/* playfair-display-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/playfair-display-v37-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* playfair-display-900italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 900;
+    src: url('../fonts/playfair-display-v37-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/roboto-v47-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+ 
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 100;
+    src: url('../fonts/roboto-v47-latin-100italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/roboto-v47-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v47-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+@font-face {
+    font-display: swap; 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v47-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+@font-face {
+    font-display: swap; 
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/merriweather-v30-latin-regular.eot'); 
+    src: url('../fonts/merriweather-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/merriweather-v30-latin-regular.woff2') format('woff2'), 
+         url('../fonts/merriweather-v30-latin-regular.woff') format('woff'), 
+         url('../fonts/merriweather-v30-latin-regular.ttf') format('truetype'), 
+         url('../fonts/merriweather-v30-latin-regular.svg#Merriweather') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-display: swap; 
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/merriweather-v30-latin-900.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/merriweather-v30-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/merriweather-v30-latin-900.woff2') format('woff2'), 
+         url('../fonts/merriweather-v30-latin-900.woff') format('woff'),
+         url('../fonts/merriweather-v30-latin-900.ttf') format('truetype'), 
+         url('../fonts/merriweather-v30-latin-900.svg#Merriweather') format('svg'); /* Legacy iOS */
+  }
+  
+  @font-face {
+    font-display: swap; 
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 900;
+    src: url('../fonts/merriweather-v30-latin-900italic.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/merriweather-v30-latin-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/merriweather-v30-latin-900italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/merriweather-v30-latin-900italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+         url('../fonts/merriweather-v30-latin-900italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+         url('../fonts/merriweather-v30-latin-900italic.svg#Merriweather') format('svg'); /* Legacy iOS */
+  }
+
+:root {
+    --color-dark:#31261a;
+    --color-descriptoin:#7c6f61;
+    --color-price:rgb(126, 241, 155);
+    --color-light:#F5E3C3;
+    --primery-color:#d4af37;/*#be7a3b;rgb(153, 132, 171)*/
+    /*--primery-color-dark:#410111;/*rgb(125, 22, 229);*/
+    --primery-color-dark:#761eb0;/*rgb(125, 22, 229);*/
+    --color-hover:rgb(11, 227, 65);
+    --color-green:#6a9a23;
+    --color-green-dark:#3a642d;
+    --primery-color-rgba:rgb(212, 175, 55,0.5);/*колір прозорий обовязково писати в rgb форматіює ще формат для hsl*/
+    --color-light-hhh:#94616e;
+    --color-light-hhh-rgba:rgb(148, 97, 110,0.3);
+}
+*{
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin-top: 0;
+}
+ /*@media screen and (min-width: 1280px){
+        .nav{
+            margin-right: 20px
+        }
+       
+        }*/
+   
+
+/*header*/
+header{
+   /* padding: 48px 18px;*/
+   width: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+}
+
+
+body{
+    background-color: var(  --color-light);
+    color:var( --color-dark);
+    font-family: "roboto",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 1288px;
+    scroll-behavior: smooth;/*забезпечує плавний перехід посилань*/
+    @media screen and (max-width: 480px){
+        font-size: 14px;
+       
+    }
+  
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+.logo:hover{
+    transform:scale(1.05);/*збільшує фото при курсорі*/
+    transition:  transform 0.3s ease-in-out;
+}
+
+
+    
+/*title*/
+/*.container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    row-gap: 10px;
+    padding: 0;
+    margin: 0;
+}*/
+ul{
+    font-style: normal;/* знімвє точки біля списку*/
+    list-style-type: none;
+    margin: 0 ;
+    padding: 0;
+
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 24px;
+   
+   
+    
+}
+a{
+    text-decoration: none;/*видаляє підкркслення*/
+   
+    color: inherit;/*знімає синій*/
+}
+
+
+.container-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    row-gap: 10px;
+    padding: 0;
+   
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    max-width: 1288px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: auto;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: auto;
+    }    
+}
+.container-nav{
+    margin-top: 35px;
+    margin-right: 12px;
+    @media screen and (max-width: 980px){
+        margin-top: 15px;
+        
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+       
+    }    
+}
+.contact{
+    color: #fafbfc;
+}
+.container-bagraund-foto{
+    position: relative;
+    z-index: -3;
+    width:100%;
+    max-width: 1288px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+
+h1{
+    color:var(--primery-color-dark);
+    font-family: "pleyfair-display",serif;
+    font-style: italic;
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 1.5;
+    text-align: center;/*напис по центру*/
+    margin-bottom: 8px;
+    
+    padding-top: 100px;
+    @media screen and (max-width: 980px){
+        font-size: 60px;
+        padding-top: 90px;
+    }
+}
+.bagraund-foto{
+    background-image: url(./svg/images/cymus.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.call-button:hover{
+    color:rgb(86, 58, 245);
+}
+
+.visuali-hidden{
+position: absolute;
+left: -10000px;
+top: auto;
+width: 1px;
+height: 1px;
+overflow: hidden;
+}
+/*.visyal{
+ 
+    min-width: 1288px;
+    height: 600px;
+    overflow: hidden;/*ховає фото поза рамками
+    position: relative;
+}
+.visyal-card{/*нижнє фото*/
+   
+   /* width: 600px;
+    height: 500px;
+   overflow: hidden;/*ховає лишній зміст,який не помістився в div
+   height: auto;
+   width: auto;
+   object-fit: cover;/*поміщає фото в рамки діву
+   position: relative;
+   z-index: -1;/*поміщає фото вниз
+}
+.paragraf-facty{ /*верхнє фото
+    border: 2px solid var(--color-descriptoin);
+    border-radius: 30px;
+    background-color:var(--color-light-hhh-rgba);
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    /*opacity: 0,8; робить прозорим фото*/
+    /*background-color: transparent;робить фон прозорим
+    top: 50px;
+    left: 20px;
+    
+
+
+}*/
+.paragraf-facty-text{
+    font-family: "poboto",sans-serif;
+    font-style: italic;
+    font-size:  24px;
+    font-weight: 100;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    @media screen and (max-width: 480px){
+        font-size:  32px;
+    }
+}
+
+/*foto*/
+.facty{
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+span{
+    color:var(--primery-color-dark);
+    font-size: 30px;
+    font-family: "pleyfair-display",serif;
+    font-style: italic;
+}
+/*information*/
+.advantages-list{
+    margin-bottom: 24px;
+}
+h2{
+    color: var(--primery-color-dark);
+    font-family: "Merriweather",serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.5;
+    
+}
+/*.advantages{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    margin-left: 48px;
+}*/
+.advantages-box{
+    width:100%;
+    height: auto;
+    background-color: var(--color-light-hhh-rgba);
+    border-radius: 10px;
+    font-family: "poboto",sans-serif;
+    font-style: italic;
+    font-size:  24px;
+    font-weight: 80px;
+    line-height: 1.5;
+    text-align: center;
+    
+
+}
+.advantages-text{
+    padding-top: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+}
+.advantages-div{
+    width: 500px;
+    height: 400px;
+    display: flex;
+}
+    /*justify-content:center;
+}
+.advantages-div-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/*shop*/
+
+.container-shop {
+    display: flex;
+   
+}
+.img-list{
+    width: 240px;
+    height: 200px;
+    display: flex;
+    justify-content:center;
+    padding-top: 4px;
+    padding-left: 5px;
+   
+   
+}
+.img-list-item{
+width: 100%;
+height: 100%;
+overflow: hidden;
+object-fit: cover;
+border-radius: 8px;
+/*flex-grow:initial;*/
+
+}
+.item{
+    width: 250px;
+    height: 300px;
+    gap: 24px;
+    margin-bottom: 8px;
+    border: 3px solid var(--color-descriptoin);
+    border-radius: 8px;
+    margin-right: 12px;
+   
+   
+  
+}
+
+.item-img{
+    cursor: pointer;
+    
+    
+}
+.item-img:hover{
+    transform:scale(1.05);/*збільшує фото при курсорі*/
+    transition:  transform 0.3s ease-in-out;
+}
+.shop-list{
+    display: flex;
+    flex-direction: row;/*блоки в рядок*/
+    flex-wrap: wrap;/*переносить блоки в слідуючий рядок*/
+    justify-content: space-around;/*вирівнює елементи в рядку щоб була однакова відстань*/
+     @media screen and (max-width: 480px){
+    
+        display: flex;
+    flex-wrap:calc(50%-10px)
+    }
+}
+
+    
+   
+
+.title-list{
+    text-align: center;
+}
+.price{
+    color: var(--primery-color-dark);
+    text-align: center;
+    font-family: "roboto ",sans-serif;
+    font-style: italic;
+}
+/*footer*/
+footer{
+    background-color:var( --color-light-hhh-rgba) ;
+    height: 180px;
+    margin-top: 48px;
+    width: 100%;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+       
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+    
+    }    
+}
+.footer-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+
+}
+.footer-parahraf{
+    margin:4px;
+}
+.footer-parahraf:hover{
+
+    color:whitesmoke;
+  
+}
+
+.href-footer{
+    text-decoration: none;
+    font-style: normal;
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    margin-right: 48px;/*150px*/
+    margin-left: 48px;
+    
+   
+}
+.href-footer-contact{
+    text-decoration: none;
+    font-style: normal;
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    margin-right: 100px;
+    margin-top: 10px;
+    
+}
+.href-footer-icons{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.href-footer-icons-img{
+   /* color: var(--primery-color-dark);*/
+    width: 25px;
+    height: 25px;
+    fill:var(--primery-color-dark);
+}
+.logol{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.yahr{
+    
+    /*width: 250px;*/
+    color: var(--color-descriptoin);
+    text-align: end;
+    padding-top: 150px;
+    padding-right: 20px;
+    @media screen and (max-width: 750px){
+        display: none;
+    }
+    
+}
+/*фото сторінки каталогу*/
+.description {
+    margin:0 ;
+   
+}
+.price-description{
+    color: var(--primery-color-dark);
+    font-size:  24px;
+    font-weight: 80px;
+    font-family: "roboto ",sans-serif;
+    font-style: italic;
+    
+}
+
+.bagraund-foto-cymus{
+    background-image: url(./svg/images/cymus2.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+       
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-rembo{
+    background-image: url(./svg/images/rembo.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-rumeyka{
+    background-image: url(./svg/images/Rumeyka.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-nelson{
+    background-image: url(./svg/images/Nelson.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-piestryy{
+    background-image: url(./svg/images/piestryy.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px; 
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-iupiter{
+    background-image: url(./svg/images/iupiter.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px; 
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-klubnichnyy{
+background-image: url(./svg/images/klubnichnyy.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+} 
+.bagraund-foto-krasavchyk{
+    background-image: url(./svg/images/krasavchyk.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-muskat-iziumskyy{
+    background-image: url(./svg/images/muskat\ iziumskyy.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-siuzana{
+    background-image: url(./svg/images/siuzana.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-enerhodar{
+    background-image: url(./svg/images/enerhodar.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-dniprovskyy-suvenir{
+    background-image: url(./svg/images/dniprovskyy\ suvenir.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-alians{
+    background-image: url(./svg/images/alians.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px; 
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-stolittia{
+    background-image: url(./svg/images/stolittia.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }      
+}
+.bagraund-foto-dynka{
+    background-image: url(./svg/images/dynka2.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px; 
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }    
+}
+.bagraund-foto-sonechko{
+    background-image: url(./svg/images/sonechko.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }     
+}
+.bagraund-foto-baykonur{
+    background-image: url(./svg/images/baykonur.jpg);
+    background-size: cover;/*щоб фото розтфгувалось по всьому контейнеру*/
+    width: 100%;
+    max-width: 1288px;
+    height: 450px;
+    background-repeat: no-repeat; /*щоб зображення не повторювалось*/
+    /*background-size:auto;*/
+    background-position: center;
+    margin-bottom: 48px;
+    @media screen and (max-width: 480px){
+        max-width: 480px;
+        height: 300px;
+    }
+    @media screen and (max-width: 980px){
+        max-width: 980px;
+        height: 300px;
+    }     
+}
+/*прайс -лист*/
+/*.table-container{
+    border: 3px solid var(--color-descriptoin);
+}*/
+tr{
+   height: 15px; 
+   align-content:  center;
+}
+tr:hover{
+    background-color: var(--color-light-hhh-rgba);
+}
+td{
+    align-content:  center;
+}
+.prace-list{
+    padding: 0;
+    font-size: 60px;
+}
+.table-container{
+    margin-bottom: 50px;
+    overflow-x: auto;/*скрол для таблиці,якщо не поміщається таблиця на сторінку*/
+}
